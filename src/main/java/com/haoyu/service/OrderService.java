@@ -155,6 +155,7 @@ public class OrderService {
 	// 获取数据库所有的数量
 	public Long getOrderCount() {
 		return mesOrderCustomerMapper.getOrderCount();
+		
 	}
 
 	// 获取id集合
@@ -203,6 +204,7 @@ public class OrderService {
 
 		int count = mesOrderCustomerMapper.countBySearchDto(dto);
 		if (count > 0) {
+			//回显页面
 			List<MesOrder> orderList = mesOrderCustomerMapper.getPageListBySearchDto(dto, page);
 			return PageResult.<MesOrder>builder().total(count).data(orderList).build();
 		}

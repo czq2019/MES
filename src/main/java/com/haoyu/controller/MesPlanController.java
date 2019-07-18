@@ -1,6 +1,5 @@
 package com.haoyu.controller;
 
-import java.text.SimpleDateFormat;
 
 import javax.annotation.Resource;
 

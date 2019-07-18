@@ -9,7 +9,7 @@ import com.haoyu.dto.SearchOrderDto;
 import com.haoyu.model.MesOrder;
 
 public interface MesOrderCustomerMapper {
-	Long getOrderCount();
+	 Long getOrderCount();
 
 	// @Param("dto")--给mapper.xml查询sql指定参数名称 #{dto.keyword}
 	int countBySearchDto(@Param("dto") SearchOrderDto dto);
@@ -21,4 +21,6 @@ public interface MesOrderCustomerMapper {
 	void batchStart(@Param("list")String[] idArray);
 
 	MesOrder selectByOrderId(@Param("orderid")String orderid);
+
+	
 }
